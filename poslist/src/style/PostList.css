@@ -1,0 +1,163 @@
+/* Overall container styles */
+.post-list-container {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: -250px;
+}
+
+/* Heading style */
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Create button */
+.create-btn {
+  display: block;
+  width: 180px;
+  margin: 15px auto;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.create-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+/* Posts container - row-based layout */
+.posts-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+/* Individual post card styles */
+.post-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 270px;
+  display: flex;
+  flex-direction: column; /* Ensures content is stacked */
+  height: 450px; /* Reduced height for the post card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.post-card h2 {
+  font-size: 1.4rem;
+  color: #333;
+  margin: 12px;
+  flex-grow: 0; /* Prevents h2 from taking unnecessary space */
+}
+
+.post-card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 12px;
+  line-height: 1.5;
+  flex-grow: 1; /* Allows description to grow and take available space */
+}
+
+.post-card img {
+  width: 100%;
+  height: 250px; /* Fixed height for image */
+  object-fit: cover; /* Ensures image aspect ratio is maintained */
+  border-bottom: 2px solid #f0f0f0;
+}
+
+/* Post action buttons (edit & delete) */
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background-color: #f9f9f9;
+  border-top: 2px solid #f0f0f0;
+  margin-top: auto; /* Pushes buttons to the bottom of the card */
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #218838;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* Main container styles */
+.main {
+  width: 100%;
+  max-width: 1900px;
+  padding-top: 800px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .post-list-container {
+      margin-top: -150px;
+  }
+
+  .create-btn {
+      width: 150px;
+  }
+
+  .posts-grid {
+      gap: 20px;
+      justify-content: center;
+  }
+
+  .post-card {
+      width: 220px;
+      height: auto; /* Allow height to adjust on mobile */
+  }
+
+  .post-card img {
+      height: 150px; /* Adjust image height on mobile */
+  }
+
+  h1 {
+      font-size: 1.5rem;
+  }
+}
